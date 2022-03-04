@@ -1,0 +1,127 @@
+/* DESKTOP CSS MOBILE WILL HAVE TO BE REALLY DIFFERENT */
+
+:root {
+    --rows-: 2;
+    --columns-: 2;
+}
+
+html {
+    width: calc(100vw * var(--rows-));
+    height: calc(100vh * var(--columns-));
+    overflow: hidden;
+    font-family: ff-tisa-sans-web-pro, sans-serif
+}
+
+body {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    background-color: #264653;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+section {
+    text-align: center;
+    font-size: 15px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E9C46A;
+}
+.rows {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.columns {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+strong {
+    font-weight: bolder;
+    color: #E76F51;
+    font-size: 30px;
+}
+
+.intro {
+    
+}
+
+.punc {
+    /* font-weight: bold; */
+    color: #F4A261;
+    font-size: 20px;
+}
+
+.arrow {
+
+}
+#work {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+
+}
+.projects {
+    width: 70%;
+    height: 90%;
+    background-color: #2A9D8F;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+.head-1 {
+    font-weight: bold;
+    font-size: larger;
+    padding: .5em 0;
+    /* border-bottom: 1px solid #E76F51; */
+}
+.project, .proj-over{
+    min-width: 100px;
+    min-height: 100px;
+}
+.project {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.proj-inner {
+    height: 100%;
+    width: 100%;
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.proj-over {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all .5s ease;
+    opacity: .8;
+    background-color:#264653;
+}
+
+.over-hide {
+    opacity: 0;
+}
+.tip {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+    font-size: 10px;
+}
+.lnk {
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
