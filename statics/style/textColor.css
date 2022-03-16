@@ -1,0 +1,29 @@
+.arrow-cont {
+    position: absolute;
+    font-size: xx-large;
+    font-family: ff-tisa-sans-web-pro, sans-serif;
+    cursor: pointer;
+    color: #fff;
+    background-image:linear-gradient(
+        #E9C46A 50%,
+        #F4A261 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: auto 200%;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animate-text
+{
+    animation: textclip 1s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: center 200%;
+    }
+}

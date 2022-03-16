@@ -1,0 +1,8 @@
+.slideshow {
+    position: absolute;
+    padding: 0;
+    width: inherit;
+    overflow: hidden;
+    user-select: none;
+    white-space: nowrap;
+}

@@ -1,46 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" content="width=device-width, initial-scale=1.0"/>
-    <title>Title</title>
+    <meta charset="utf-8" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ben Wirth</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://use.typekit.net/zba7wku.css">
     <link href="style/reset.css" rel="stylesheet"/>
     <link href="style/style.css" rel="stylesheet"/>
+    <link href="style/slideshow.css" rel="stylesheet"/>
+    <link href="style/textColor.css" rel="stylesheet"/>
 
+    <script src="scripts/miscAni.js"></script>
+    <script src="scripts/slideshow.js"></script>
     <script src="scripts/base.js"></script>
     <script src="scripts/main.js"></script>
 </head>
 <body>
-    <div class="rows">
-        <div class="columns">
-            <section>
-                <div class="intro">
-                    Hi<span class="punc">,</span> my name is <strong>Ben</strong><br>I am a <strong>Fullstack Developer</strong><span class="punc">.</span><br>
-                    <br><span class="tip">(Hover over arrows, scroll or use arrow keys to explore my site!)</span>
-                </div>
-            </section>
-            <section>
-                <div class="projects">
-                    <div id="work">
-
+    <div class="body">
+        <div class="rows">
+            <div class="columns">
+                <section name="Intro">
+                    <div class="intro">
+                        Hi<span class="punc">,</span> my name is <strong>Ben</strong><br>I am a <strong>Fullstack Developer</strong><span class="punc">.</span><br>
+                        <br><span class="tip">(Hover over or click the arrows, scroll, or use the arrow keys to explore my site!)</span>
                     </div>
-                </div>
-            </section>
-        </div>
-        <div class="columns">
-            <section>
-                <div class="aboutMe">
-                    AboutME
-                </div>
-            </section>
-            <section>
-                <div class="contact">
-                    CONTACT
-                </div>
-            </section>
+                </section>
+                <section name="Projects">
+                    <div class="work">
+    
+                    </div>
+                </section>
+            </div>
+            <div class="columns">
+                <section name="About">
+                    <div class="aboutMe">
+                        <div class="about">
+                            <div class="icons">
+                                
+                            </div>
+                            <div>
+                                <div class="mePos">
+                                    <div class="me">
+
+                                    </div>
+                                </div>
+                                <div class="info-cont">
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section style="justify-content:space-between;" name="Connect">
+                    <div id="ssTarget" class="quote">
+                        
+                    </div>
+                    <div class="connect">
+                        <div class="head-1" style="text-align: left; margin-bottom: 10px;">
+                            <p><strong style="font-size: 50px;">Let<span class="punc">'</span>s connect<span class="punc">!</span></strong></p>
+                        </div>
+                        <div class="socials">
+                            <div class="socials-in">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div id="inp" class="rows">
+                            <div class="head-1" style="text-align: left; margin-bottom: 10px;">
+                                <p><strong style="font-size: 50px;">Send me a message<span class="punc">!</span></strong></p>
+                            </div>
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Enter your name" name="name" autocomplete="false">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Enter your email address" name="email" autocomplete="false">
+                            <label for="msg">Message</label>
+                            <textarea placeholder="Hey, I'm looking for a developer for Project X at Company Y. How soon could we discuss this?" autocomplete="false" name="msg"></textarea>
+                            <div class="but-cont">
+                                <button>Send message</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </body>

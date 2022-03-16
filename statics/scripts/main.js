@@ -1,37 +1,31 @@
 window.addEventListener('load', () => {
-    // window.scroll({
-    //     left: -window.scrollX,
-    //     top: -window.scrollY,
-    //     behavior: "smooth"
-    // })
+    setTimeout(() => {
+        window.scroll({
+            left: -window.scrollX,
+            top: -window.scrollY,
+            behavior: "auto"
+        })
+    }, 5)
+    
     loadEls()
-    loadImages()
-    genWork()
+    window.addEventListener('keydown', event => {
+        if (keyHandler[event.key]) keyHandler[event.key]()
+    })
+    window.addEventListener("wheel", (event) => {
+        if (event.target.tagName == "SECTION") {
+            if (event.wheelDelta > 0) slide("u")
+            else slide("d")
+        }
+    })
 })
 
-window.addEventListener('keydown', event => {
-    if (event.key === " ") {
-        let d = document.querySelector(".project")
-
-    }
-
-    if (event.key === "ArrowRight") {
-        slide("r")
-    }
-    if (event.key === "ArrowLeft") {
-        slide("l")
-    }
-    if (event.key === "ArrowDown") {
-        slide("d")
-    }
-    if (event.key === "ArrowUp") {
-        slide("u")
-    }
-})
 window.addEventListener('resize', event => {
+    selected = 0
+    loadArrows()
+    loadArrows("Intro")
     window.scroll({
         left: -window.scrollX,
         top: -window.scrollY,
-        behavior: "smooth"
+        behavior: "auto"
     })
 })
