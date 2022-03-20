@@ -1,3 +1,5 @@
+loadImages(imgS)
+
 window.addEventListener('load', () => {
     setTimeout(() => {
         window.scroll({
@@ -17,6 +19,10 @@ window.addEventListener('load', () => {
             else slide("d")
         }
     })
+})
+
+window.addEventListener("scroll", (event) => {
+    if (!scrolling) event.preventDefault()
 })
 
 window.addEventListener('resize', event => {

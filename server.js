@@ -5,9 +5,9 @@ const app = express()
 
 app.use(express.static(__dirname + "/statics"))
 
-app.get("/", (req, res) => {
-    console.log("GOT")
-})
+const indexRoutes = require("./routes/routes")
+
+app.use("", indexRoutes)
 
 app.listen(PORT, () => {
     console.log(`App listening at http://localhost:${PORT}`)

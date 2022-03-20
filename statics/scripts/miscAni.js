@@ -1,4 +1,4 @@
-let utils = {}
+var utils = {}
 
 utils.ease = function(t) {
     if (t <= .5) return 2 * t * t
