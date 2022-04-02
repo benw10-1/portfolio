@@ -2,7 +2,7 @@
     {
         "name": "Traverse Wikipedia",
         "about": "In this miniproject, I am making a webpage that displays relationships between Wikipedia pages. I use the Wikimedia API to get the links to each searched Wikipedia page and traverse each link iteratively. A relational graph is created then displayed on a <a href='https://github.com/vasturiano/force-graph' target='_blank'>force graph</a>. After the graph is generated, a user can click on a node to visit the Wikipedia page or right click to make that node a new search root. Nodes are color coded for readability. Links that are redirects are also resolved to the page they point to. This project was inspired by my previous project at DEMRAR.ai where we were scraping Wikipedia pages to determine relationships and <a href='https://github.com/jwngr/sdow' target='_blank'>6 Degree of Wikipedia</a>. I have future plans to expand this project and download all of the links from Wikipedia dumps and build a MYSQL database. With this database I would be able to have my own backend calls so the user does not have to process any information. I plan to add features described <a href='https://github.com/benw10-1/traverseWikipedia' target='_blank'>here</a>.",
-        "images": ["/images/wikitraverse.png"],
+        "images": ["images/wikitraverse.png"],
         "repo": "https://github.com/benw10-1/traverseWikipedia",
         "deployed": "https://benw10-1.github.io/traverseWikipedia/",
         "tags": ["REST", "API", "data visualization", "Wikipedia", "relationships", "graph", "DEMRAR"]
@@ -10,7 +10,7 @@
     {
         "name": "Pollution Map",
         "about": "In this project, I use multiple REST APIs, the OpenLayers map library, and the Bulma CSS framework to display pollution information within a searched area. The APIs used are the OpenStreetMaps API for geocoding and WAQI for the pollution information. I used the bounding box given by the geocoding API in order to zoom into a location based on the size of the area. I used Bulma mainly for input CSS classes so that I can have a loading icon on any element. This project has taught me how to work with maps within a web application context, use CSS frameworks for specific purposes, and how to interact with a geocoding API.",
-        "images": ["/images/bluer.png"],
+        "images": ["images/bluer.png"],
         "repo": "https://github.com/benw10-1/bluerSkies",
         "deployed": "https://benw10-1.github.io/bluerSkies/",
         "tags": ["REST", "map", "API", "Bulma", "pollution", "CSS", "geocoding"]
@@ -18,7 +18,7 @@
     {
         "name": "Weather Dashboard",
         "about": "In this miniproject I use Javascript to obtain weather information from a user searched location, and display it on a map as well as on text elements. I do this by using the OpenLayers library for the map, IPAPI for the user's current location, OpenStreetMaps API for the location search feature, and OpenWeather API for the weather information. When you hver over map items weather information is also displayed. I also display icons for the weather next to the weather information.",
-        "images": ["/images/weatherDash.png"],
+        "images": ["images/weatherDash.png"],
         "repo": "https://github.com/benw10-1/weatherDashboard",
         "deployed": "https://benw10-1.github.io/weatherDashboard/",
         "tags": ["REST", "map", "miniproject", "geocoding", "API"]
@@ -26,7 +26,7 @@
     {
         "name": "Simple Password Generator",
         "about": "In this miniproject I use Javascript to generate a random password that is displayed on an element. The script also add functionality for buttons that allow the user to select criteria for their password such as if they wanted uppercase or no uppercase letters. The buttons also turn red or green depending on whether the criteria are active. There is also an input element where you can specify the length of the password the user wants. The JavaScript uses the math library to choose random numbers, and just picks a random index within an array of ascii codes in order to choose a random character.",         
-        "images": ["/images/randomPass.png"],
+        "images": ["images/randomPass.png"],
         "repo": "https://github.com/benw10-1/randomPass",
         "deployed": "https://benw10-1.github.io/randomPass/",
         "tags": ["miniproject", "JavaScript"]
@@ -34,7 +34,7 @@
     {
         "name": "Day Planner",
         "about": "In this miniproject, I use JS in order to code a web app that allows the user to input text that is stored in a block denoted by a time between 8am and 5pm, in order to create a “calender”. The code uses localStorage in order to allow the events to persist even wheen you reload the page. I use CSS gradients and animations in order to make the page look cleaner. The user can also change events in the past or in the future. The boxes are also color coded to past present and future, but the present box has a gradient on it with the red line denoting how far into the hour it is currently. The data for future and past dates also persists when you reload the page. All of this information updates in live time using an interval that runs every second.",
-        "images": ["/images/dayPlanner.png"],
+        "images": ["images/dayPlanner.png"],
         "repo": "https://benw10-1.github.io/dayPlanner/  ",
         "deployed": "https://github.com/benw10-1/dayPlanner/",
         "tags": ["miniproject", "JS"]
