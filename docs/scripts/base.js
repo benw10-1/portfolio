@@ -58,9 +58,7 @@ const keyHandler = {
     "ArrowRight": () => {slide("r")},
     "ArrowDown": () => {slide("d")},
     "ArrowUp": () => {slide("u")},
-    // " ": () => {
-    //     aniLogo()
-    // },
+
 }
 const moveHandle = function (event) {
     let [xOff, yOff] = [mouseTip.offsetWidth, mouseTip.offsetHeight]
@@ -362,7 +360,7 @@ function loadEls() {
 }
 
 async function getWork() {
-    const link = window.location + "./projects.json"
+    const link = window.location + "/projects.json"
     return fetch(link).then((data) => {return data.json()}).then((data) => {
         for (const x of data) {
             let work = loadWork(x)
@@ -412,8 +410,8 @@ function loadWork(work) {
 
         let banner = document.createElement("div")
         banner.classList.add("modal-banner")
-        if (data.images.length > 1) banner.style.backgroundImage = "url(" + window.location.origin + data.images[1] + ")"
-        else banner.style.backgroundImage = "url(" + window.location.origin + data.images[0] + ")"
+        if (data.images.length > 1) banner.style.backgroundImage = "url(" data.images[1] + ")"
+        else banner.style.backgroundImage = "url(" data.images[0] + ")"
         disp.appendChild(banner)
 
         let name = document.createElement("div")
