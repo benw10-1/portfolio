@@ -187,7 +187,7 @@ function loadImages(imgs) {
 
     for (const item of imgs) {
         let img = new Image()
-        img.src = "/images/" + item
+        img.src = "./images/" + item
         images[item.split(".")[0]] = img
     }
 }
@@ -362,7 +362,7 @@ function loadEls() {
 }
 
 async function getWork() {
-    const link = window.location.origin + "/projects.json"
+    const link = window.location + "./projects.json"
     return fetch(link).then((data) => {return data.json()}).then((data) => {
         for (const x of data) {
             let work = loadWork(x)
