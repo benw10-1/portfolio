@@ -1,5 +1,5 @@
 # Portfolio
-A portfolio displaying what I have done! 
+A portfolio made using vanilla CSS and JavaScript displaying what I have done! 
 
 [Visit the page here!](https://github.com/benw10-1/portfolio)
 ## Usage
