@@ -410,8 +410,8 @@ function loadWork(work) {
 
         let banner = document.createElement("div")
         banner.classList.add("modal-banner")
-        if (data.images.length > 1) banner.style.backgroundImage = "url(" data.images[1] + ")"
-        else banner.style.backgroundImage = "url(" data.images[0] + ")"
+        if (data.images.length > 1) banner.style.backgroundImage = "url(" + data.images[1] + ")"
+        else banner.style.backgroundImage = "url(" + data.images[0] + ")"
         disp.appendChild(banner)
 
         let name = document.createElement("div")
