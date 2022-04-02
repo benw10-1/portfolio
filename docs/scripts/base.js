@@ -185,7 +185,7 @@ function loadImages(imgs) {
 
     for (const item of imgs) {
         let img = new Image()
-        img.src = "../images/" + item
+        img.src = window.location + "./images/" + item
         images[item.split(".")[0]] = img
     }
 }
@@ -410,8 +410,8 @@ function loadWork(work) {
 
         let banner = document.createElement("div")
         banner.classList.add("modal-banner")
-        if (data.images.length > 1) banner.style.backgroundImage = "url(" + window.location + data.images[1] + ")"
-        else banner.style.backgroundImage = "url(" + window.location + data.images[0] + ")"
+        if (data.images.length > 1) banner.style.backgroundImage = "url(" data.images[1] + ")"
+        else banner.style.backgroundImage = "url(" data.images[0] + ")"
         disp.appendChild(banner)
 
         let name = document.createElement("div")
