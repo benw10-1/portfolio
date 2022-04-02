@@ -1,0 +1,77 @@
+html {
+    width: unset;
+    height: unset;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+.body.mobile {
+    width: 100vw;
+    height: unset;
+    display: flex;
+    flex-wrap: nowrap;
+}
+strong {
+    font-size: 60px;
+}
+.aboutMe {
+    transform: scale(.8);
+}
+section {
+    width: 100vw;
+}
+.work {
+    margin-top: 10px;
+    width: 100vw;
+    height: calc(100vw * 1.5);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.project, .proj-over, .proj-inner {
+    width: 45vw;
+    height: 45vw;
+}
+.proj-over {
+    font-size: smaller;
+}
+.quote {
+    position: relative;
+    transform: scale(.55);
+}
+.slideshow {
+    left: -5%;
+    top: -50vh;
+}
+section[name="Projects"], section[name="Connect"] {
+    transform: scale(.8);
+}
+section[name="Connect"] {
+    flex-direction: column;
+}
+
+#logo.mobile {
+    display: sticky;
+}
+.head-1 strong{
+    font-size: 35px;
+}
+.contact {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+}
+.contact label, .contact strong {
+    text-align: center;
+}
+input[type="text"] {
+    width: unset;
+}
+input[type="email"] {
+    width: unset;
+}
