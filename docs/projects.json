@@ -9,11 +9,11 @@
     },
     {
         "name": "Chess Bot",
-        "about": "I have been trying to create a chess engine for about a year, and this is my best result. I use an iterative deepening framework for the engine. Using iterative deepening allows me to use the Minimax algorithm quite effectively in addition to allowing me to order moves in the search based on previous searches. I also made the UI for the chess board but I did NOT make the code for move generation, that is thanks to the Chess.js library. Test your skills against Mr. Roboto (that's the engine's name for now)!. It is set to take max 15 seconds at a search depth of 3 and a quiescent search depth of 10, if time is up for the search, we just default to the last iterative deepening iteration's best found move",
+        "about": "I have been trying to create a chess engine for about a year, and this is my best result. I use an iterative deepening framework for the engine. Using iterative deepening allows me to use the Minimax algorithm quite effectively in addition to allowing me to order moves in the search based on previous searches. I also made the UI for the chess board but I did NOT make the code for move generation, that is thanks to the Chess.js library. Test your skills against Mr. Roboto (that's the engine's name for now)!. It is set to take max 15 seconds at a search depth of 3 and a quiescent search depth of 10, if time is up for the search, we just default to the last iterative deepening iteration's best found move.",
         "images": ["images/chessbot.png"],
         "repo": "https://github.com/benw10-1/myChessEngine",
         "deployed": "https://benw10-1.github.io/myChessEngine/",
-        "tags": ["algorithm", "Minimax", "chess", "Chess", "iterative deepening framework", "UI"]
+        "tags": ["algorithm", "Minimax", "chess", "Chess", "iterative deepening", "UI"]
     },
     {
         "name": "Pollution Map",

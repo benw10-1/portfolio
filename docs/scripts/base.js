@@ -171,9 +171,7 @@ function loadArrows(section) {
     
         arrows.push(cont)
         sec.insertBefore(cont, sec.firstChild)
-    }
-
-    
+    }    
 }
 
 function loadImages(imgs) {
