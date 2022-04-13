@@ -1,11 +1,19 @@
 [
     {
         "name": "Traverse Wikipedia",
-        "about": "In this miniproject, I am making a webpage that displays relationships between Wikipedia pages. I use the Wikimedia API to get the links to each searched Wikipedia page and traverse each link iteratively. A relational graph is created then displayed on a <a href='https://github.com/vasturiano/force-graph' target='_blank'>force graph</a>. After the graph is generated, a user can click on a node to visit the Wikipedia page or right click to make that node a new search root. Nodes are color coded for readability. Links that are redirects are also resolved to the page they point to. This project was inspired by my previous project at DEMRAR.ai where we were scraping Wikipedia pages to determine relationships and <a href='https://github.com/jwngr/sdow' target='_blank'>6 Degree of Wikipedia</a>. I have future plans to expand this project and download all of the links from Wikipedia dumps and build a MYSQL database. With this database I would be able to have my own backend calls so the user does not have to process any information. I plan to add features described <a href='https://github.com/benw10-1/traverseWikipedia' target='_blank'>here</a>.",
+        "about": "In this miniproject, I am made a webpage that displays relationships between Wikipedia pages. I use the Wikimedia API to get the links to each searched Wikipedia page and traverse each link iteratively. A relational graph is created then displayed on a <a href='https://github.com/vasturiano/force-graph' target='_blank'>force graph</a>. After the graph is generated, a user can click on a node to visit the Wikipedia page or right click to make that node a new search root. Nodes are color coded for readability. Links that are redirects are also resolved to the page they point to. This project was inspired by my previous project at DEMRAR.ai where we were scraping Wikipedia pages to determine relationships and <a href='https://github.com/jwngr/sdow' target='_blank'>6 Degrees of Wikipedia</a>. I have future plans to expand this project and download all of the links from Wikipedia dumps and build a MYSQL database. With this database I would be able to have my own backend calls so the user does not have to process any information. I plan to add features described <a href='https://github.com/benw10-1/traverseWikipedia' target='_blank'>here</a>.",
         "images": ["images/wikitraverse.png"],
         "repo": "https://github.com/benw10-1/traverseWikipedia",
         "deployed": "https://benw10-1.github.io/traverseWikipedia/",
-        "tags": ["REST", "API", "data visualization", "Wikipedia", "relationships", "graph", "DEMRAR"]
+        "tags": ["REST", "API", "data visualization", "Wikipedia", "relationships", "graph", "DEMRAR", "MYSQL"]
+    },
+    {
+        "name": "Chess Bot",
+        "about": "I have been trying to create a chess engine for about a year, and this is my best result. I use an iterative deepening framework for the engine. Using iterative deepening allows me to use the Minimax algorithm quite effectively in addition to allowing me to order moves in the search based on previous searches. I also made the UI for the chess board but I did NOT make the code for move generation, that is thanks to the Chess.js library. Test your skills against Mr. Roboto (that's the engine's name for now)!. It is set to take max 15 seconds at a search depth of 3 and a quiescent search depth of 10, if time is up for the search, we just default to the last iterative deepening iteration's best found move",
+        "images": ["images/chessbot.png"],
+        "repo": "https://github.com/benw10-1/myChessEngine",
+        "deployed": "https://benw10-1.github.io/myChessEngine/",
+        "tags": ["algorithm", "Minimax", "chess", "Chess", "iterative deepening framework", "UI"]
     },
     {
         "name": "Pollution Map",
@@ -13,7 +21,7 @@
         "images": ["images/bluer.png"],
         "repo": "https://github.com/benw10-1/bluerSkies",
         "deployed": "https://benw10-1.github.io/bluerSkies/",
-        "tags": ["REST", "map", "API", "Bulma", "pollution", "CSS", "geocoding"]
+        "tags": ["REST", "map", "API", "Bulma", "pollution", "CSS", "geocoding", "data visualization"]
     },
     {
         "name": "Weather Dashboard",
@@ -21,7 +29,7 @@
         "images": ["images/weatherDash.png"],
         "repo": "https://github.com/benw10-1/weatherDashboard",
         "deployed": "https://benw10-1.github.io/weatherDashboard/",
-        "tags": ["REST", "map", "miniproject", "geocoding", "API"]
+        "tags": ["REST", "map", "miniproject", "geocoding", "API", "data visualization"]
     },
     {
         "name": "Simple Password Generator",

@@ -491,12 +491,11 @@ label {
 }
 
 .info > * {
-    line-height: 100%;
+    line-height: 140%;
 }
 
 .info .punc {
-    font-size: 1.5em;
-    font-weight:lighter;
+    font-size: 1em;
 }
 
 .info strong {

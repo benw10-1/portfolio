@@ -51,7 +51,7 @@ const ds = ["u", "r", "d", "l"]
 const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
 const imgS = ["github.png", "logo.png", "favicon.ico", "hackerRank.png", "leetcode.png", "linkedIn.png", "email.png", "discord.png",
                   "c#.png", "c++.png", "discord.png", "django.png", "info.png", "python.png", "javascript.png", "logo1.png", "logo2.png"]
-const ts = ["Map", "Data Visualization"]
+const ts = ["Data Visualization"]
 
 const keyHandler = {
     "ArrowLeft": () => {slide("l")},
@@ -360,7 +360,7 @@ function loadEls() {
 }
 
 async function getWork() {
-    const link = window.location + "/projects.json"
+    const link = "projects.json"
     return fetch(link).then((data) => {return data.json()}).then((data) => {
         for (const x of data) {
             let work = loadWork(x)
