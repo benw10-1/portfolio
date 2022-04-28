@@ -16,6 +16,14 @@
         "tags": ["algorithm", "Minimax", "chess", "Chess", "iterative deepening", "UI"]
     },
     {
+        "name": "Graphing Utility",
+        "about": "This is a graphing utility built using Python, the PyGame library, and the Sympy library. The application uses Sympy to find the solution to the equation within our width and height bounds for the window. This particular app was challenging because you have to translate each point yielded from the equation to coordinates on the PyGame plane. Using this idea, I was able to draw lines, axis, and indicators that are to scale.",
+        "images": ["images/graphing-util.png"],
+        "repo": "https://github.com/benw10-1/graphing-util",
+        "deployed": "https://github.com/benw10-1/graphing-util",
+        "tags": ["graph", "Python", "PyGame", "Sympy", "UI"]
+    },
+    {
         "name": "Bug Tracker",
         "about": "In this project, me and a team of 3 other people developed a 'bug tracker' in a timeframe of 2 weeks. It primarily uses Handlebars.js, which is a templating engine that works well with Express.js, and Sequelize, which is a model controller for Express.js. Handlebars and Sequelize combine to allow us to create login functionality, restricted views, and updatable information. You can add an individual to a project so that they can view and add to it. You can also see the history of such updates and who made each update or creation. Email verification was originally implemented, however, it was dificult to get working on Heroku within the 2 week timeframe so we decided to disable it.",
         "images": ["images/bugtracker.png"],
