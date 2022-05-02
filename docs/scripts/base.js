@@ -183,7 +183,7 @@ function loadImages(imgs) {
 
     for (const item of imgs) {
         let img = new Image()
-        img.src = "../images/" + item
+        img.src = window.location + "./images/" + item
         images[item.split(".")[0]] = img
     }
 }
