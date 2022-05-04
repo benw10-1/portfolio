@@ -12,6 +12,6 @@ app.get('*', function(req, res) {
     res.redirect("/")
 })
 
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT, () => {
     console.log(`App listening at http://localhost:${PORT}`)
 });

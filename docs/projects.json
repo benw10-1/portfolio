@@ -1,7 +1,7 @@
 [
     {
         "name": "Traverse Wikipedia",
-        "about": "In this miniproject, I am made a webpage that displays relationships between Wikipedia pages. I use the Wikimedia API to get the links to each searched Wikipedia page and traverse each link iteratively. A relational graph is created then displayed on a <a href='https://github.com/vasturiano/force-graph' target='_blank'>force graph</a>. After the graph is generated, a user can click on a node to visit the Wikipedia page or right click to make that node a new search root. Nodes are color coded for readability. Links that are redirects are also resolved to the page they point to. This project was inspired by my previous project at DEMRAR.ai where we were scraping Wikipedia pages to determine relationships and <a href='https://github.com/jwngr/sdow' target='_blank'>6 Degrees of Wikipedia</a>. I have future plans to expand this project and download all of the links from Wikipedia dumps and build a MYSQL database. With this database I would be able to have my own backend calls so the user does not have to process any information. I plan to add features described <a href='https://github.com/benw10-1/traverseWikipedia' target='_blank'>here</a>.",
+        "about": "In this project, I am made a webpage that displays relationships between Wikipedia pages. I use the Wikimedia API to get the links to each searched Wikipedia page and traverse each link iteratively. A relational graph is created then displayed on a <a href='https://github.com/vasturiano/force-graph' target='_blank'>force graph</a>. After the graph is generated, a user can click on a node to visit the Wikipedia page or right click to make that node a new search root. Nodes are color coded for readability. Links that are redirects are also resolved to the page they point to. This project was inspired by my previous project at DEMRAR.ai where we were scraping Wikipedia pages to determine relationships and <a href='https://github.com/jwngr/sdow' target='_blank'>6 Degrees of Wikipedia</a>. I have future plans to expand this project and download all of the links from Wikipedia dumps and build a MYSQL database. With this database I would be able to have my own backend calls so the user does not have to process any information. I plan to add features described <a href='https://github.com/benw10-1/traverseWikipedia' target='_blank'>here</a>.",
         "images": ["images/wikitraverse.png"],
         "repo": "https://github.com/benw10-1/traverseWikipedia",
         "deployed": "https://benw10-1.github.io/traverseWikipedia/",
@@ -14,6 +14,14 @@
         "repo": "https://github.com/benw10-1/myChessEngine",
         "deployed": "https://benw10-1.github.io/myChessEngine/",
         "tags": ["algorithm", "Minimax", "chess", "Chess", "iterative deepening", "UI"]
+    },
+    {
+        "name": "Visualize Trees",
+        "about": "In this project, I created my own rendering engine to render the links and nodes at specific X and Y coordinates. I use my custom rendering engine to display what a binary tree looks like, and also what it looks like to traverse one using multiple different methods. I plan to add many Leetcode problems to visualize in addition to other tree search algorithms. I also am going to add functionality for parsing your own binary tree structure, as well as a mode for generating trees with a random amount of children too. Red is unvisited, grey is traversed, and green is visited. You can choose to see the return values for the functions involved.",
+        "images": ["images/visualize.png"],
+        "repo": "https://github.com/benw10-1/visualizeproblems",
+        "deployed": "https://benw10-1.github.io/visualizeproblems/",
+        "tags": ["data visualization", "render", "tree", "graph", "traverse"]
     },
     {
         "name": "Graphing Utility",
@@ -29,7 +37,7 @@
         "images": ["images/bugtracker.png"],
         "repo": "https://github.com/benw10-1/bugTracker",
         "deployed": "https://youtu.be/YJa4yFu-X20",
-        "tags": ["SQL", "restricted", "group", "view", "js", "Handlebars", "Express", "Sequelize", "model", "views"]
+        "tags": ["SQL", "restricted", "group", "views", "js", "Handlebars", "Express", "Sequelize", "model", "views", "verification"]
     },
     {
         "name": "Pollution Map",

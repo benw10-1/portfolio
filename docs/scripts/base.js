@@ -512,8 +512,11 @@ function markUp(text, strong=[]) {
     })
     for (const x of strong) {
         if (!x) continue
-        let reg = new RegExp("(?<!<[^>]*)" + x + "(?![^<]*>)", "g")
-        text = text.replace(reg, "<strong>" + x + "</strong>")
+        //[^\s]*
+        let reg = new RegExp("(?<!<[^>]*)" + x + "[^\\s$]*(?![^<]*>)", "g")
+        let matches = text.match(reg)
+        if (!matches) continue
+        text = text.replace(reg, "<strong>$&</strong>")
     }
 
     return text
