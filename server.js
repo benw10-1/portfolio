@@ -1,14 +1,17 @@
 const express = require("express")
 
-const PORT = 3001
+const PORT = process.env.PORT || 3000
 const app = express()
 
-app.use(express.static(__dirname + "/statics"))
+app.use(express.static(__dirname + "/docs"))
 
 const indexRoutes = require("./routes/routes")
 
 app.use("", indexRoutes)
+app.get('*', function(req, res) {
+    res.redirect("/")
+})
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`App listening at http://localhost:${PORT}`)
 });

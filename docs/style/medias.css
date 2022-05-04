@@ -1,0 +1,90 @@
+@media screen and (max-width: 1000px) {
+    section {
+        transform: scale(.9);
+    }
+    .quote {
+        transform: scale(1.1);
+    }
+    .u {
+        left: 50%;
+        top: -1.5em;
+    }
+    .r {
+        right: -1.5em;
+    }
+    .d {
+        bottom: -1.5em;
+    }
+    .l {
+        left: -1.5em;
+    }
+    section[name="Intro"] .l{
+        left: -2em;
+    }
+    section[name="Intro"] .r{
+        right: -2em;
+    }
+    .work {
+        justify-items: end;
+    }
+}
+@media screen and (max-width: 880px) {
+    section {
+        transform: scale(.8);
+    }
+    .quote {
+        top: 5%;
+    }
+    .u {
+        left: 50%;
+        top: -3.5em;
+    }
+    .r {
+        right: -3.4em;
+    }
+    .d {
+        bottom: -3.5em;
+    }
+    .l {
+        left: -3.4em;
+    }
+    section[name="Intro"]:not(.tip) {
+        white-space: nowrap;
+    }
+    section[name="Intro"] .l{
+        left: -4em;
+    }
+    section[name="Intro"] .r{
+        right: -4em;
+    }
+}
+@media screen and (max-width: 800px) {
+    section:not(section[name="About"]) {
+        transform: scale(.7);
+    }
+    .quote {
+        top: 0;
+    }
+    .u {
+        left: 50%;
+        top: -4em;
+    }
+    .r {
+        right: -5em;
+    }
+    .d {
+        bottom: -7em;
+    }
+    .l {
+        left: -5em;
+    }
+    section[name="Intro"]:not(.tip) {
+        white-space: nowrap;
+    }
+    section[name="Intro"] .l{
+        left: -6em;
+    }
+    section[name="Intro"] .r{
+        right: -6em;
+    }
+}
