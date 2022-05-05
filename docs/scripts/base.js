@@ -13,31 +13,31 @@ const socialS = [["github", "https://github.com/benw10-1"],
 ["discord", "benjamin10#1851"], 
 ["hackerRank", "https://www.hackerrank.com/benjaminwirth10"], 
 ["leetcode", "https://leetcode.com/ben_wirth10/"]]
-const baseWords = ["love", "JavaScript", "developer", "Python", "Express", "documentation", "API", "modular code", "Node", "js", "summary", "passionate", "Django", "Neo4J", "dynamically", "Hackerrank", "LeetCode", "problem solving", "critical thinking", "OpenLayers"]
-const ics = ["info", "python", "javascript"]
+const baseWords = ["love", "JavaScript", "developer", "Python", "Express", "documentation", "API", "modular code", "Node", "js", "summary", "passionate", "Django", "Neo4J", "dynamically", "Hackerrank", "LeetCode", "problem solving", "critical thinking", "OpenLayers", "C", "Object Oriented Programming", "Unity", "programming"]
+const ics = ["info", "javascript", "python", "c"]
 const punc = /(?<!<[^>]*)[.,\/#!$%\^&\*;:{}=\-_`~()\"\'“”]+(?![^<]*>)/g
 const mail = /[A-Za-z0-9!#$%&'*+-/=?^_`{|}~\.]{2,}@[A-Za-z0-9\-]+\.[a-z]+/
 const txt = {
     "info": genAbout("I'm a self-taught software/web developer born and raised in California. \
 I got into computer programming when I saw YouTube videos of people making simple games like Snake using JavaScript in 5 minutes \
 (which is still crazy to me). I didn't know about Node.js before I started web development, so I ended up starting with Python \
-because it was independant from a browser. Python has taught me that there is a module/framework for everything and that even though there is a module \
-for everything, it doesn't mean the documentation is user-friendly. I love exploring new concepts and this curiosity has pushed me through hours of reading \
+because it was independant from a browser. I love exploring new concepts and this curiosity has pushed me through hours of reading \
 documentation for APIs and libraries and this has become a skill that I am proud of. I am more specific about what libraries and APIs I have explored in my \
-JavaScript and Python sections. I also find writing modular code enjoyable because I can just copy paste my old code into new projects. In summary, I'm \
-a developer who writes modular and efficient Python/JavaScript code, who is able to learn new libraries and components quickly, and who has a passionate attitude.", "About Me", baseWords), 
-    "python": genAbout("My primary language right now is Python and I have done most of my learning using Python. Not only is it simplistic, it has no shortage \
-of libraries, frameworks, and modules. I have spent countless hours reading documentation and experimenting with a variety of Python libraries. Some of the libraries that \
-I have worked with and how I've used them are as follows: I've used the pandas and requests libraries to manipulate and view google sheets, the requests library, \
-BeautifulSoup, and Neo4J to creater a Wikipedia scraper that creates a relational database based off of where each page points, PyGame to create a chess game, \
-Panda3D to create a virtual Rubik's Cube (with the assistance of Blender as well), Django to create simple APIs which dynamically store data for other applications, \
-PyQt5 and smtplib to create an application that sends out formatted emails automatically, and finally NumPy for general array transformations. In addition to this, \
-I have also put many hours into solving coding challenges on Hackerrank and LeetCode in order to improve my problem solving skills and critical thinking.", "Python", baseWords),
-    "javascript": genAbout("JavaScript is my second favorite language right now because of its similarity to Python and this has allowed me to transfer my Python \
-programming skills into a language that is used on the web. Also similar to Python is its vast amount of community resources including frameworks and modules. For frontend \
-development, I have worked with a map library named OpenLayers which acts similarly to the Google Maps API. Developing apps using the OpenLayers library has taught me how \
-to better visualize data. Other than the map library, I also have the knowledge of any of the JavaScript versions data structures, math, and other basic libraries that also \
-exist in Python. For backend development, I have basic knowledge of SQL, mongoDB, Node.js, and Express.js.", "JavaScript", baseWords)
+JavaScript and Python sections. I also find writing modular code enjoyable because I can just reuse my old code into new projects, and it allows me to build off of previous projects. In summary, I'm \
+a developer who writes modular and efficient code, who is able to learn new libraries and components quickly, and who has a passionate attitude.", "About Me", baseWords), 
+    "javascript": genAbout("JavaScript is my primary language as of now due to its versitility. It can be run as part of a webpage as a script, or can be ran in a runtime like \
+Node.js. I have with many libraries, frameworks, and APIs such as React, OpenLayers, Wikimedia, JSdom, Moment, Mongoose, Sequelize, Express, and Google Maps. In addition to this, \
+I have strong knowledge of JavaScript fundamentals. This includes knowledge about callback functions, promises, asyncronous programming, data types, OOP, interacting with the DOM, \
+and regular expressions. Knowledge of these concepts has allowed me to create not only this portfolio, but many other projects (displayed on my projects page!) as well. JavaScript \
+has also allowed me to use my knowledge of algorithms to process information and visualize it. I plan to greatly expand my JavaScript projects once I gain enough capital to start scaling.", "JavaScript (Intermediate)", baseWords),
+    "python": genAbout("Python was the first language I learned and it is what I have done most of my coding volume in. Some of the libraries that I have worked with and how \
+I've used them are as follows: I've used the pandas and requests libraries to manipulate and view google sheets, the requests library, BeautifulSoup, and Neo4J to creater a Wikipedia \
+scraper that creates a relational database based off of where each page points, PyGame to create a chess game, Panda3D to create a virtual Rubik's Cube (with the assistance of \
+Blender as well), Django to create simple APIs which dynamically store data for other applications, PyQt5 and smtplib to create an application that sends out formatted emails \
+automatically, and finally NumPy for general array transformations. In addition to this, I have also put many hours into solving coding challenges on Hackerrank and LeetCode \
+in order to improve my problem solving skills and critical thinking.", "Python (Intermediate)", baseWords),
+    "c": genAbout("I have taken CS - 131 Which covers C++ Object Oriented Programming. I have basic knowledge of C++ application development and programming concepts. In addition \
+to this, I have basic knowledge of C# as I have coded Unity snippets and miniprojects. I plan to learn C so that I can make a real Chess engine from scratch.", "C Family (Beginner)", baseWords),
 }
 const sections = {
     "Intro": [null, "Projects", "About", "Connect"],
@@ -50,7 +50,7 @@ const msecs = ["Intro", "About", "Projects", "Connect"]
 const ds = ["u", "r", "d", "l"]
 const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
 const imgS = ["github.png", "logo.png", "favicon.ico", "hackerRank.png", "leetcode.png", "linkedIn.png", "email.png", "discord.png",
-                  "c#.png", "c++.png", "discord.png", "django.png", "info.png", "python.png", "javascript.png", "logo1.png", "logo2.png"]
+                  "c#.png", "c++.png", "discord.png", "django.png", "info.png", "python.png", "javascript.png", "logo1.png", "logo2.png", "c.png"]
 const ts = ["Data Visualization"]
 
 const keyHandler = {

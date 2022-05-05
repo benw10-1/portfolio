@@ -19,8 +19,8 @@
         "name": "Visualize Trees",
         "about": "In this project, I created my own rendering engine to render the links and nodes at specific X and Y coordinates. I use my custom rendering engine to display what a binary tree looks like, and also what it looks like to traverse one using multiple different methods. I plan to add many Leetcode problems to visualize in addition to other tree search algorithms. I also am going to add functionality for parsing your own binary tree structure, as well as a mode for generating trees with a random amount of children too. Red is unvisited, grey is traversed, and green is visited. You can choose to see the return values for the functions involved.",
         "images": ["images/visualize.png"],
-        "repo": "https://github.com/benw10-1/visualizeproblems",
-        "deployed": "https://benw10-1.github.io/visualizeproblems/",
+        "repo": "https://github.com/benw10-1/visualizetraversion",
+        "deployed": "https://benw10-1.github.io/visualizetraversion/",
         "tags": ["data visualization", "render", "tree", "graph", "traverse"]
     },
     {
