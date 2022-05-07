@@ -78,3 +78,6 @@ input[type="email"] {
 .tabs {
     white-space: nowrap;
 }
+.cont-head {
+    font-size: 35px;
+}
