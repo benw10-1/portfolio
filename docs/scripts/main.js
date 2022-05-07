@@ -1,23 +1,14 @@
 loadImages(imgS)
 
 window.addEventListener('load', () => {
-    if (!isMobile) {
-        setTimeout(() => {
+    if (!ismob()) {
+        window.requestAnimationFrame(_ => {
             window.scroll(window.innerWidth, 0)
-            const old = window.scrollX
-            window.scroll({
-                left: old + 100,
-                behavior: "smooth"
-            })
-            setTimeout(() => {
-                if (window.scrollX === old) loadMobile()
-                else loadEls()
-                window.scroll(old, 0)
-            }, 100)
-        }, 5)
+            if ('scrollBehavior' in document.documentElement.style) loadEls()
+            else loadMobile()
+        })
     }
     else loadMobile()
-    
     window.addEventListener('keydown', event => {
         if (event.target.tagName !== "BODY") return
         if (keyHandler[event.key]) keyHandler[event.key]()

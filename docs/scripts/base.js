@@ -48,7 +48,7 @@ const sections = {
 const secs = ["Connect", "Intro", "Projects", "About"]
 const msecs = ["Intro", "About", "Projects", "Connect"]
 const ds = ["u", "r", "d", "l"]
-const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
+const isMobile = ismob()
 const imgS = ["github.png", "logo.png", "favicon.ico", "hackerRank.png", "leetcode.png", "linkedIn.png", "email.png", "discord.png",
                   "c#.png", "c++.png", "discord.png", "django.png", "info.png", "python.png", "javascript.png", "logo1.png", "logo2.png", "c.png"]
 const ts = ["Data Visualization"]
@@ -89,6 +89,17 @@ const inputCheck = {
         }
         return true
     }
+}
+
+function ismob() {
+    const ua = navigator.userAgent
+
+    if(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) return true
+    if(/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) return true
+
+    if (window.matchMedia("only screen and (max-width: 768px)").matches) return true
+
+    return false
 }
 
 function slide(d) {
@@ -251,12 +262,13 @@ function loadMobile() {
     info = document.querySelector(".info-cont")
     pages = document.querySelector(".pages")
     let img = images["logo2"].cloneNode()
-    img.width = "100"
-    img.height = "100"
+    let dim = isMobile ? "75" : "100"
+    img.width = dim
+    img.height = dim
     logo.appendChild(img)
     img = images["logo1"].cloneNode()
-    img.width = "100"
-    img.height = "100"
+    img.width = dim
+    img.height = dim
     logo.appendChild(img)
 
     logo.addEventListener("click", function (event) {
@@ -526,11 +538,7 @@ function aniLogo() {
     let ani = onceAround()
     if (!ani) return
     ani.then(() => {
-        
-        if (scrolling) {
-            if (isMobile) aniLogo(10)
-            else aniLogo()
-        }
+        if (scrolling) aniLogo()
     })
 }
 

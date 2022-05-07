@@ -353,7 +353,7 @@ label {
 }
 
 .cont-body {
-    width: 75vw;
+    /* width: 75vw; */
     max-height: 60vh;
     margin-top: 10px;
     font-size: 30px;
