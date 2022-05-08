@@ -1,7 +1,8 @@
-var scrolling, myWork, logo, ssEl, ss, social, me, icons, info, selected, bod, arrows, logoAni, pos, projects, modal1, disp, modalled, tabVar, pages, mouseTip, mouseTm
+const { slideShow, checkScroll } = require("./slideshow")
+
+var scrolling, myWork, logo, ssEl, social, icons, info, selected, arrows, logoAni, projects, modal1, disp, modalled, pages, mouseTip, mouseTm
 var images = {}
 
-const rows = 2, columns = 2
 const qs = [["Talent wins games, but teamwork and intelligence win championships.", "Michael Jordan"], 
 ["Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhi"], 
 ["The person who says it cannot be done should not interrupt the person who is doing it.", "Anonymous"],
@@ -18,26 +19,10 @@ const ics = ["info", "javascript", "python", "c"]
 const punc = /(?<!<[^>]*)[.,\/#!$%\^&\*;:{}=\-_`~()\"\'“”]+(?![^<]*>)/g
 const mail = /[A-Za-z0-9!#$%&'*+-/=?^_`{|}~\.]{2,}@[A-Za-z0-9\-]+\.[a-z]+/
 const txt = {
-    "info": genAbout("I'm a self-taught software/web developer born and raised in California. \
-I got into computer programming when I saw YouTube videos of people making simple games like Snake using JavaScript in 5 minutes \
-(which is still crazy to me). I didn't know about Node.js before I started web development, so I ended up starting with Python \
-because it was independant from a browser. I love exploring new concepts and this curiosity has pushed me through hours of reading \
-documentation for APIs and libraries and this has become a skill that I am proud of. I am more specific about what libraries and APIs I have explored in my \
-JavaScript and Python sections. I also find writing modular code enjoyable because I can just reuse my old code into new projects, and it allows me to build off of previous projects. In summary, I'm \
-a developer who writes modular and efficient code, who is able to learn new libraries and components quickly, and who has a passionate attitude.", "About Me", baseWords), 
-    "javascript": genAbout("JavaScript is my primary language as of now due to its versitility. It can be run as part of a webpage as a script, or can be ran in a runtime like \
-Node.js. I have with many libraries, frameworks, and APIs such as React, OpenLayers, Wikimedia, JSdom, Moment, Mongoose, Sequelize, Express, and Google Maps. In addition to this, \
-I have strong knowledge of JavaScript fundamentals. This includes knowledge about callback functions, promises, asyncronous programming, data types, OOP, interacting with the DOM, \
-and regular expressions. Knowledge of these concepts has allowed me to create not only this portfolio, but many other projects (displayed on my projects page!) as well. JavaScript \
-has also allowed me to use my knowledge of algorithms to process information and visualize it. I plan to greatly expand my JavaScript projects once I gain enough capital to start scaling.", "JavaScript (Intermediate)", baseWords),
-    "python": genAbout("Python was the first language I learned and it is what I have done most of my coding volume in. Some of the libraries that I have worked with and how \
-I've used them are as follows: I've used the pandas and requests libraries to manipulate and view google sheets, the requests library, BeautifulSoup, and Neo4J to creater a Wikipedia \
-scraper that creates a relational database based off of where each page points, PyGame to create a chess game, Panda3D to create a virtual Rubik's Cube (with the assistance of \
-Blender as well), Django to create simple APIs which dynamically store data for other applications, PyQt5 and smtplib to create an application that sends out formatted emails \
-automatically, and finally NumPy for general array transformations. In addition to this, I have also put many hours into solving coding challenges on Hackerrank and LeetCode \
-in order to improve my problem solving skills and critical thinking.", "Python (Intermediate)", baseWords),
-    "c": genAbout("I have taken CS - 131 Which covers C++ Object Oriented Programming. I have basic knowledge of C++ application development and programming concepts. In addition \
-to this, I have basic knowledge of C# as I have coded Unity snippets and miniprojects. I plan to learn C so that I can make a real Chess engine from scratch.", "C Family (Beginner)", baseWords),
+    "info": genAbout("I'm a self-taught software/web developer born and raised in California. I got into computer programming when I saw YouTube videos of people making simple games like Snake using JavaScript in 5 minutes (which is still crazy to me). I didn't know about Node.js before I started web development, so I ended up starting with Python because it was independant from a browser. I love exploring new concepts and this curiosity has pushed me through hours of reading documentation for APIs and libraries and this has become a skill that I am proud of. I am more specific about what libraries and APIs I have explored in my JavaScript and Python sections. I also find writing modular code enjoyable because I can just reuse my old code into new projects, and it allows me to build off of previous projects. In summary, I'm a developer who writes modular and efficient code, who is able to learn new libraries and components quickly, and who has a passionate attitude.", "About Me", baseWords), 
+    "javascript": genAbout("JavaScript is my primary language as of now due to its versitility. It can be run as part of a webpage as a script, or can be ran in a runtime like Node.js. I have with many libraries, frameworks, and APIs such as React, OpenLayers, Wikimedia, JSdom, Moment, Mongoose, Sequelize, Express, and Google Maps. In addition to this, I have strong knowledge of JavaScript fundamentals. This includes knowledge about callback functions, promises, asyncronous programming, data types, OOP, interacting with the DOM, and regular expressions. Knowledge of these concepts has allowed me to create not only this portfolio, but many other projects (displayed on my projects page!) as well. JavaScript has also allowed me to use my knowledge of algorithms to process information and visualize it. I plan to greatly expand my JavaScript projects once I gain enough capital to start scaling.", "JavaScript (Intermediate)", baseWords),
+    "python": genAbout("Python was the first language I learned and it is what I have done most of my coding volume in. Some of the libraries that I have worked with and how I've used them are as follows: I've used the pandas and requests libraries to manipulate and view google sheets, the requests library, BeautifulSoup, and Neo4J to creater a Wikipedia scraper that creates a relational database based off of where each page points, PyGame to create a chess game, Panda3D to create a virtual Rubik's Cube (with the assistance of Blender as well), Django to create simple APIs which dynamically store data for other applications, PyQt5 and smtplib to create an application that sends out formatted emails automatically, and finally NumPy for general array transformations. In addition to this, I have also put many hours into solving coding challenges on Hackerrank and LeetCode in order to improve my problem solving skills and critical thinking.", "Python (Intermediate)", baseWords),
+    "c": genAbout("I have taken CS - 131 Which covers C++ Object Oriented Programming. I have basic knowledge of C++ application development and programming concepts. In addition to this, I have basic knowledge of C# as I have coded Unity snippets and miniprojects. I plan to learn C so that I can make a real Chess engine from scratch.", "C Family (Beginner)", baseWords),
 }
 const sections = {
     "Intro": [null, "Projects", "About", "Connect"],
@@ -48,9 +33,7 @@ const sections = {
 const secs = ["Connect", "Intro", "Projects", "About"]
 const msecs = ["Intro", "About", "Projects", "Connect"]
 const ds = ["u", "r", "d", "l"]
-const isMobile = ismob()
-const imgS = ["github.png", "logo.png", "favicon.ico", "hackerRank.png", "leetcode.png", "linkedIn.png", "email.png", "discord.png",
-                  "c#.png", "c++.png", "discord.png", "django.png", "info.png", "python.png", "javascript.png", "logo1.png", "logo2.png", "c.png"]
+const imgS = ["github.png", "logo.png", "favicon.ico", "hackerRank.png", "leetcode.png", "linkedIn.png", "email.png", "discord.png", "c#.png", "c++.png", "discord.png", "django.png", "info.png", "python.png", "javascript.png", "logo1.png", "logo2.png", "c.png"]
 const ts = ["Data Visualization"]
 
 const keyHandler = {
@@ -94,10 +77,9 @@ const inputCheck = {
 function ismob() {
     const ua = navigator.userAgent
 
+    if (window.matchMedia("only screen and (max-width: 768px)").matches) return true
     if(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) return true
     if(/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) return true
-
-    if (window.matchMedia("only screen and (max-width: 768px)").matches) return true
 
     return false
 }
@@ -114,23 +96,23 @@ function slide(d) {
         if (selected === 0 || selected === 1) selected += 1
         else {scrolling = false; return failed}
         let width = document.querySelectorAll("section")[selected].offsetWidth
-        opt['left'] = width + (selected - 1) * width
+        opt["left"] = width + (selected - 1) * width
     }
     if (d === "l") {
         if (selected > 0 && selected !== 3) selected -= 1
         else {scrolling = false; return failed}
         let width = document.querySelectorAll("section")[selected].offsetWidth
-        opt['left'] = width + (selected - 1) * width
+        opt["left"] = width + (selected - 1) * width
     }
     if (d === "d") {
         if (selected === 1) selected += 2
         else {scrolling = false; return failed}
-        opt['top'] = document.querySelectorAll("section")[selected].offsetHeight
+        opt["top"] = document.querySelectorAll("section")[selected].offsetHeight
     }
     if (d === "u") {
         if (selected === 3) selected -= 2
         else {scrolling = false; return failed}
-        opt['top'] = -document.querySelectorAll("section")[selected].offsetHeight
+        opt["top"] = -document.querySelectorAll("section")[selected].offsetHeight
     }
     window.scroll(opt)
     loadArrows()
@@ -223,7 +205,7 @@ function loadSocials() {
         else {
             img.addEventListener("click", event => {
                 if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(x[1])
-                if (!isMobile) {
+                if (!ismob()) {
                     moveHandle(event)
                     setTip("Copied " + x[0] + " ID to clipboard!")
                 }
@@ -262,7 +244,7 @@ function loadMobile() {
     info = document.querySelector(".info-cont")
     pages = document.querySelector(".pages")
     let img = images["logo2"].cloneNode()
-    let dim = isMobile ? "75" : "100"
+    let dim = ismob() ? "75" : "100"
     img.width = dim
     img.height = dim
     logo.appendChild(img)
@@ -356,7 +338,7 @@ function loadEls() {
         if (!scrolling) event.preventDefault()
     })
     
-    window.addEventListener('resize', event => {
+    window.addEventListener("resize", event => {
         selected = 1
         displayModal(false)
         loadArrows()
@@ -366,6 +348,16 @@ function loadEls() {
             top: 0,
             behavior: "auto"
         })
+    })
+    window.addEventListener("keydown", event => {
+        if (event.target.tagName !== "BODY") return
+        if (keyHandler[event.key]) keyHandler[event.key]()
+    })
+    window.addEventListener("wheel", (event) => {
+        if (event.target.tagName == "SECTION") {
+            if (event.wheelDelta > 0) slide("u")
+            else slide("d")
+        }
     })
 }
 
@@ -464,7 +456,7 @@ function loadWork(work) {
 }
 
 function displayModal(state) {
-    if (isMobile) return
+    if (ismob()) return
     if (state) {
         modal1.classList.remove("hidden")
         loadArrows()
@@ -687,3 +679,5 @@ function setTip(tip, color, fadeTime=1000) {
         })
     }, 2000)
 }
+
+module.exports = { ismob, loadEls, loadMobile, loadImages, imgS }

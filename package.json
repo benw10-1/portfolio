@@ -4,11 +4,23 @@
   "description": "Simple chat application built using Express",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "build": "webpack"
   },
   "author": "Ben Wirth",
   "license": "ISC",
   "dependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.17.9",
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-es6-promise": "^1.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }

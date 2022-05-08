@@ -88,3 +88,5 @@ function checkScroll(el) {
         }, 100)
     })
 }
+
+module.exports = { slideShow, checkScroll, clamp }
