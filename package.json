@@ -4,7 +4,8 @@
   "description": "Simple chat application built using Express",
   "main": "server.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node server"
   },
   "author": "Ben Wirth",
   "license": "ISC",
