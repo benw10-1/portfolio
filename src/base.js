@@ -16,7 +16,7 @@ const socialS = [["github", "https://github.com/benw10-1"],
 ["leetcode", "https://leetcode.com/ben_wirth10/"]]
 const baseWords = ["love", "JavaScript", "developer", "Python", "Express", "documentation", "API", "modular code", "Node", "js", "summary", "passionate", "Django", "Neo4J", "dynamically", "Hackerrank", "LeetCode", "problem solving", "critical thinking", "OpenLayers", "C", "Object Oriented Programming", "Unity", "programming"]
 const ics = ["info", "javascript", "python", "c"]
-const punc = /(?<!<[^>]*)[.,\/#!$%\^&\*;:{}=\-_`~()\"\'“”]+(?![^<]*>)/g
+const punc = /(?<!<\w*>)[.,\/#!$%\^&\*;:{}=\-_`~()\"\'“”]+(?!<\w*>)/g
 const mail = /[A-Za-z0-9!#$%&'*+-/=?^_`{|}~\.]{2,}@[A-Za-z0-9\-]+\.[a-z]+/
 const txt = {
     "info": genAbout("I'm a self-taught software/web developer born and raised in California. I got into computer programming when I saw YouTube videos of people making simple games like Snake using JavaScript in 5 minutes (which is still crazy to me). I didn't know about Node.js before I started web development, so I ended up starting with Python because it was independant from a browser. I love exploring new concepts and this curiosity has pushed me through hours of reading documentation for APIs and libraries and this has become a skill that I am proud of. I am more specific about what libraries and APIs I have explored in my JavaScript and Python sections. I also find writing modular code enjoyable because I can just reuse my old code into new projects, and it allows me to build off of previous projects. In summary, I'm a developer who writes modular and efficient code, who is able to learn new libraries and components quickly, and who has a passionate attitude.", "About Me", baseWords), 
